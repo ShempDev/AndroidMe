@@ -13,8 +13,6 @@ import com.example.android.android_me.R;
 import java.util.ArrayList;
 import java.util.List;
 
-;
-
 /**
  * Created by jeremy on 7/1/17.
  */
@@ -28,7 +26,7 @@ public class BodyPartFragment extends Fragment {
     private final static String LIST_INDEX = "list_index";
     //Variables to store and set the image list id and the list index of image.
     private List<Integer> mImageIds;
-    private int mListIndex;
+    private int mListIndex = 0;
 
     //Constructor needed to instantiate the fragment class.
     public BodyPartFragment() {

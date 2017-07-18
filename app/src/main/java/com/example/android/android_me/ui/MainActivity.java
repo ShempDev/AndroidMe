@@ -11,9 +11,9 @@ import com.example.android.android_me.data.AndroidImageAssets;
 public class MainActivity extends AppCompatActivity implements MasterListFragment.OnImageClickListener {
 
     //Variables to hold the index value of the body part selected in master list.
-    private int headIndex = 0;
-    private int bodyIndex = 0;
-    private int legIndex = 0;
+    private int headIndex;
+    private int bodyIndex;
+    private int legIndex;
     //Variable to hold true/false if in two-pane display mode.
     private boolean mTwoPane;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements MasterListFragmen
         setContentView(R.layout.activity_main);
 
         //If androidMe's linearLayout exists then in two-pane mode.
-        if (findViewById(R.id.android_me_linear_layout) != null) {
+        if (getResources().getBoolean(R.bool.two_panes)) {
             mTwoPane = true;
             //Since we are in two-pane mode, need to inflate the fragment.
             if (savedInstanceState == null) { //Only create new fragments if none exist.
